@@ -13,6 +13,7 @@
         <module>common</module>
         <module>base</module>
         <module>base/nacos</module>
+        <module>User</module>
     </modules>
 
     <parent>
@@ -43,6 +44,15 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+            <version>5.8.28</version>
         </dependency>
     </dependencies>
 

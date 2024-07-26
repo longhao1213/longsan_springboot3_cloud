@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: user
+  namespace: longsan-namespace
+  labels:
+    longsan: user
+spec:
+  selector:
+    matchLabels:
+      longsan: user
+  template:
+    metadata:
+      labels:
+        longsan: user
+    spec:
+      containers:
+        - name: user-app
+          image: longsanx/longsan-user:1.2
+          ports:
+            - containerPort: 9003
+
