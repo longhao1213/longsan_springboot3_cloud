@@ -11,4 +11,4 @@ spec:
     - port: 9003
       targetPort: 9003
       protocol: TCP
-      nodePort: 30003
+      nodePort: 30113

@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: user-app
-          image: longsanx/longsan-user:1.2
+          image: longsanx/longsan-user:latest
           ports:
             - containerPort: 9003
-
+          imagePullPolicy: Always
