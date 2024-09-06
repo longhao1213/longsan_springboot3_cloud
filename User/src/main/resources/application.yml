@@ -1,2 +1,13 @@
 server:
   port: 9003
+arthas:
+  #自定义服务在arthas中的名称 主要用来在tunnel-server确定唯一的标识
+  agent-id: user-server-local
+  # tunnel-server服务器的地址，前提是已经配置好了tunnel-server
+  tunnel-server: ws://127.0.0.1:7777/ws
+  # 当前服务名，如果不配置agent-id会自动生成服务名加下划线随机值的agent-id
+  app-name: user-server-local
+  # 默认telnet端口
+  telnet-port: 3658
+  # http端口
+  http-port: 8563

@@ -7,9 +7,10 @@
         <groupId>com.longsan</groupId>
         <artifactId>longsan_springboot3_cloud</artifactId>
         <version>1.0-SNAPSHOT</version>
+        <relativePath>../../pom.xml</relativePath>
     </parent>
 
-    <artifactId>User</artifactId>
+    <artifactId>higress</artifactId>
 
     <properties>
         <maven.compiler.source>21</maven.compiler.source>
@@ -17,10 +18,4 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
-    <dependencies>
-        <dependency>
-            <groupId>com.taobao.arthas</groupId>
-            <artifactId>arthas-spring-boot-starter</artifactId>
-        </dependency>
-    </dependencies>
 </project>

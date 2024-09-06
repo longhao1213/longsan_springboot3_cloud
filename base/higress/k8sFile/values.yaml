@@ -1,0 +1,18 @@
+global:
+  istioNamespace: istio-system
+
+higress-console:
+  resources:
+    requests:
+      cpu: 500m
+      memory: 512Mi
+
+higress-core:
+  gateway:
+    resources:
+    requests:
+      cpu: 2000m
+      memory: 2048Mi
+    limits:
+      cpu: 2000m
+      memory: 2048Mi
