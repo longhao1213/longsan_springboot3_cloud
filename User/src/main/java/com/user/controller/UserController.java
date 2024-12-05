@@ -1,6 +1,7 @@
 package com.user.controller;
 
 import com.user.domain.User;
+import io.swagger.v3.oas.annotations.Operation;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotBlank;
 import lombok.RequiredArgsConstructor;
@@ -18,6 +19,7 @@ public class UserController {
     private final RestTemplate restTemplate;
 
     @GetMapping("/getUser")
+    @Operation(summary = "获取用户")
     public String getUser(@RequestParam() @Valid @NotBlank(message = "faewjiofwea") String  userName) {
         return userName;
     }

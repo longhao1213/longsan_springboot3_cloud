@@ -54,3 +54,42 @@ admin/LongH******
     web端默认地址 http://127.0.0.1:8563/
     telnet默认地址 telnet localhost 3658
     ```
+#### 日志系统 基于docker安装skywalking接入
+1. 创建自定义docker网络
+   ```shell
+   docker network create skywalking-network
+   ```
+2. 安装OAP服务器 使用内置H2数据库
+   ```shell
+   docker run -d \
+   --name skywalking-oap \
+   --network skywalking-network \
+   -p 12800:12800 \
+   -p 11800:11800 \
+   -e SW_STORAGE=h2 \
+   apache/skywalking-oap-server:10.1.0-java21
+   ```
+  
+3. 安装UI容器 端口暴露9899
+   ```shell
+   docker run -d \
+   --name skywalking-ui \
+   --network skywalking-network \
+   -p 9899:8080 \
+   -e SW_OAP_ADDRESS=http://skywalking-oap:12800 \
+   apache/skywalking-ui:10.1.0-java21
+   ```
+4. 访问检查是否安装成功 
+   ```html
+   http://127.0.0.1:9899
+   ```
+5. 官网下载对应版本的agent
+   ```html
+   https://skywalking.apache.org/downloads/
+   ```
+6. 在需要的采集日志的服务上添加启动参数
+   ```shell
+   -javaagent:/Volumes/980PRO/tools/skywalking-agent/skywalking-agent.jar \
+   -Dskywalking.agent.service_name=<your-service-name> \
+   -Dskywalking.collector.backend_service=127.0.0.1:11800
+   ```

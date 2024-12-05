@@ -17,6 +17,7 @@
         <module>base/security6</module>
         <module>base/redisCache</module>
         <module>base/higress</module>
+        <module>Order/order-api</module>
     </modules>
 
     <parent>
@@ -36,6 +37,7 @@
         <mybatis-plus-boot-starter.version>3.5.7</mybatis-plus-boot-starter.version>
         <arthas.version>4.0.0</arthas.version>
         <validation-api.version>2.0.1.Final</validation-api.version>
+        <knife4j.version>4.5.0</knife4j.version>
     </properties>
 
     <dependencyManagement>
@@ -62,6 +64,11 @@
                 <groupId>javax.validation</groupId>
                 <artifactId>validation-api</artifactId>
                 <version>${validation-api.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.xiaoymin</groupId>
+                <artifactId>knife4j-openapi3-jakarta-spring-boot-starter</artifactId>
+                <version>${knife4j.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
