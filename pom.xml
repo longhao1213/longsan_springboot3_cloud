@@ -17,7 +17,10 @@
         <module>base/security6</module>
         <module>base/redisCache</module>
         <module>base/higress</module>
-        <module>Order/order-api</module>
+        <module>producer</module>
+        <module>consumer</module>
+        <module>consumer/consumer-api</module>
+        <module>consumer/consumer-biz</module>
     </modules>
 
     <parent>
@@ -25,6 +28,8 @@
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>3.2.4</version>
     </parent>
+
+    <name>longsan_springboot3_cloud</name>
 
     <properties>
         <maven.compiler.source>21</maven.compiler.source>
@@ -38,6 +43,8 @@
         <arthas.version>4.0.0</arthas.version>
         <validation-api.version>2.0.1.Final</validation-api.version>
         <knife4j.version>4.5.0</knife4j.version>
+        <nacos.version>2023.0.1.2</nacos.version>
+        <openfeign.version>4.2.0</openfeign.version>
     </properties>
 
     <dependencyManagement>
@@ -69,6 +76,21 @@
                 <groupId>com.github.xiaoymin</groupId>
                 <artifactId>knife4j-openapi3-jakarta-spring-boot-starter</artifactId>
                 <version>${knife4j.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+                <version>${nacos.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+                <version>${nacos.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-openfeign</artifactId>
+                <version>${openfeign.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

@@ -10,6 +10,11 @@
     </parent>
 
     <artifactId>base</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>longsan-web</module>
+        <module>logging</module>
+    </modules>
 
     <properties>
         <maven.compiler.source>21</maven.compiler.source>
