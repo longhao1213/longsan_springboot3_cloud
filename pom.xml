@@ -21,6 +21,7 @@
         <module>consumer</module>
         <module>consumer/consumer-api</module>
         <module>consumer/consumer-biz</module>
+        <module>base/netty-learn</module>
     </modules>
 
     <parent>

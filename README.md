@@ -67,7 +67,7 @@ admin/LongH******
    -p 12800:12800 \
    -p 11800:11800 \
    -e SW_STORAGE=h2 \
-   apache/skywalking-oap-server:10.1.0-java21
+   apache/skywalking-oap-server:9.3.0
    ```
   
 3. 安装UI容器 端口暴露9899
@@ -77,7 +77,7 @@ admin/LongH******
    --network skywalking-network \
    -p 9899:8080 \
    -e SW_OAP_ADDRESS=http://skywalking-oap:12800 \
-   apache/skywalking-ui:10.1.0-java21
+   apache/skywalking-ui:9.3.0
    ```
 4. 访问检查是否安装成功 
    ```html

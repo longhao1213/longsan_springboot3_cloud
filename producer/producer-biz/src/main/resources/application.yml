@@ -2,7 +2,7 @@ server:
   port: 7888
 spring:
   application:
-    name: producer
+    name: producer-service
   cloud:
     nacos:
       config:

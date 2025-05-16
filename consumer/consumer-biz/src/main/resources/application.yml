@@ -2,7 +2,7 @@ server:
   port: 7889
 spring:
   application:
-    name: consumer
+    name: consumer-service
   cloud:
     nacos:
       config:
