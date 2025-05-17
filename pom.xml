@@ -22,6 +22,7 @@
         <module>consumer/consumer-api</module>
         <module>consumer/consumer-biz</module>
         <module>base/netty-learn</module>
+        <module>base/websocketDemo</module>
     </modules>
 
     <parent>
@@ -93,14 +94,15 @@
                 <artifactId>spring-cloud-starter-openfeign</artifactId>
                 <version>${openfeign.version}</version>
             </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-web</artifactId>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
     <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
+
 
         <dependency>
             <groupId>org.projectlombok</groupId>

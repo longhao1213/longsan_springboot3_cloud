@@ -1,0 +1,6 @@
+server:
+  port: 9909
+logging:
+  level:
+    org.springframework.web.reactive.socket: DEBUG
+    org.springframework.web.reactive.handler: DEBUG
