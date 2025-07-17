@@ -1,0 +1,25 @@
+server:
+  port: 10110
+spring:
+  main:
+    web-application-type: reactive
+  ai:
+    ollama:
+      base-url: http://localhost:11434
+      init:
+        pull-model-strategy: never # 是否启动时拉去模型
+      chat:
+        options:
+          model: deepseek-r1:8b # 使用模型
+          num_gpu: 1
+    model:
+      chat: ollama
+
+    mcp:
+      server:
+        enabled: true
+        name: webflux-mcp-server
+        type: sync
+        sse-message-endpoint: /mcp/message
+        sse-endpoint: /sse
+#        base-url: api/v1

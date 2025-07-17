@@ -1,0 +1,17 @@
+server:
+  port: 10111
+spring:
+#  main:
+#    web-application-type: reactive
+  application:
+    name: webflux-mcp-client
+  ai:
+    mcp:
+      client:
+        name: mcp-client
+        sse:
+          connections:
+            webflux-mcp-server:
+              url: http://127.0.0.1:10110
+              sse-endpoint: /sse
+        type: sync

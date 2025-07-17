@@ -1,0 +1,6 @@
+mqtt:
+  broker: tcp://localhost:1883  # 可替换为你的 MQTT 服务地址
+  client-id: demo-client-001
+  username: testuser
+  password: testpass
+  topic: demo/topic
