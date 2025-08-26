@@ -10,7 +10,7 @@ spring:
         pull-model-strategy: never # 是否启动时拉去模型
       chat:
         options:
-          model: deepseek-r1:8b # 使用模型
+          model: llama3.1:8b # 使用模型
           num_gpu: 1
     model:
       chat: ollama
@@ -23,3 +23,6 @@ spring:
         sse-message-endpoint: /mcp/message
         sse-endpoint: /sse
 #        base-url: api/v1
+logging:
+  level:
+    org.springframework.ai.chat.client.advisor: debug

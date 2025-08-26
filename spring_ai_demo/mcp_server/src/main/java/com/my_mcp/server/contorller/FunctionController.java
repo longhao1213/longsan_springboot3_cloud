@@ -1,0 +1,12 @@
+package com.my_mcp.server.contorller;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping("/function")
+public class FunctionController {
+
+
+
+}
