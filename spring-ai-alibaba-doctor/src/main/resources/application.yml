@@ -1,0 +1,25 @@
+server:
+  port: 10110
+spring:
+  application:
+    name: spring-ai-alibaba
+  ai:
+    dashscope:
+      enabled: false # 禁用DashScope模型
+    ollama:
+      enabled: true # 启用Ollama模型
+      base-url: http://localhost:11434
+      init:
+        pull-model-strategy: never # 是否启动时拉去模型
+      chat:
+        options:
+          model: llama3.1:8b # 使用模型
+          num_gpu: 1
+      model:
+        chat: ollama
+    memory:
+      redis:
+        host: 127.0.0.1
+        port: 6379
+        password: 12345678
+        timeout: 5000

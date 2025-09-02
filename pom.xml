@@ -17,16 +17,13 @@
         <module>base/security6</module>
         <module>base/redisCache</module>
         <module>base/higress</module>
-        <module>producer</module>
-        <module>consumer</module>
-        <module>consumer/consumer-api</module>
-        <module>consumer/consumer-biz</module>
         <module>base/netty-learn</module>
         <module>base/websocketDemo</module>
         <module>spring_ai_demo</module>
         <module>spring_ai_demo/mcp_client</module>
         <module>spring_ai_demo/mcp_server</module>
         <module>base/mqtt-demo</module>
+        <module>spring-ai-alibaba-doctor</module>
     </modules>
 
     <parent>
@@ -109,7 +106,6 @@
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-web</artifactId>
-                <version>${spring-boot.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
